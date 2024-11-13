@@ -1,0 +1,67 @@
+{
+  "id": "linktree",
+  "type": "SharedSlice",
+  "name": "Linktree",
+  "description": "Linktree",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "foto": {
+          "type": "Image",
+          "config": {
+            "label": "Foto",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "nome": {
+          "type": "Text",
+          "config": {
+            "label": "Nome",
+            "placeholder": ""
+          }
+        },
+        "clinica_estetica": {
+          "type": "Text",
+          "config": {
+            "label": "Clinica Estetica",
+            "placeholder": ""
+          }
+        },
+        "links": {
+          "type": "Group",
+          "config": {
+            "label": "Links",
+            "repeat": true,
+            "fields": {
+              "textolink": {
+                "type": "Text",
+                "config": {
+                  "label": "TextoLink",
+                  "placeholder": ""
+                }
+              },
+              "link_do_texto": {
+                "type": "Link",
+                "config": {
+                  "label": "Link Do Texto",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
