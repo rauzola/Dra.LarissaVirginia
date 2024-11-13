@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = LinktreeSlice | RichTextSlice;
+type PageDocumentDataSlicesSlice = SiteSlice | LinktreeSlice | RichTextSlice;
 
 /**
  * Content for Page documents
@@ -223,6 +223,58 @@ export type RichTextSlice = prismic.SharedSlice<
   RichTextSliceVariation
 >;
 
+/**
+ * Primary content in *Site → Default → Primary*
+ */
+export interface SiteSliceDefaultPrimary {
+  /**
+   * imagem field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: site.default.primary.imagem
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem: prismic.ImageField<never>;
+
+  /**
+   * texto field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: site.default.primary.texto
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Site Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SiteSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SiteSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Site*
+ */
+type SiteSliceVariation = SiteSliceDefault;
+
+/**
+ * Site Shared Slice
+ *
+ * - **API ID**: `site`
+ * - **Description**: Site
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SiteSlice = prismic.SharedSlice<"site", SiteSliceVariation>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -257,6 +309,10 @@ declare module "@prismicio/client" {
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
       RichTextSliceDefault,
+      SiteSlice,
+      SiteSliceDefaultPrimary,
+      SiteSliceVariation,
+      SiteSliceDefault,
     };
   }
 }
