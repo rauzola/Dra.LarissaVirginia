@@ -13,7 +13,7 @@ const Linktree = ({ slice }: LinktreeProps): JSX.Element => {
 
       <S.Container>
         {/* <S.Image id="Photo" src="assets/Vivek.jpg" alt="VivekArtiste" /> */}
-        <S.Imagem src={slice.primary.foto.url} alt="Imagem do usuário" />
+        <S.Imagem src={slice.primary.foto.url || ""} alt={slice.primary.foto.alt || ""} />
         <S.Nome>
           {slice.primary.nome}
 
