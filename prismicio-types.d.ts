@@ -4,7 +4,11 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = SiteSlice | LinktreeSlice | RichTextSlice;
+type PageDocumentDataSlicesSlice =
+  | HeaderSlice
+  | SiteSlice
+  | LinktreeSlice
+  | RichTextSlice;
 
 /**
  * Content for Page documents
@@ -77,6 +81,155 @@ export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
 export type AllDocumentTypes = PageDocument;
+
+/**
+ * Item in *Header → Default → Primary → BotoesDeNavegacao*
+ */
+export interface HeaderSliceDefaultPrimaryBotoesdenavegacaoItem {
+  /**
+   * Nome da buttao field in *Header → Default → Primary → BotoesDeNavegacao*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.botoesdenavegacao[].nome_da_buttao
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  nome_da_buttao: prismic.KeyTextField;
+
+  /**
+   * link do buttao field in *Header → Default → Primary → BotoesDeNavegacao*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.botoesdenavegacao[].link_do_buttao
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_do_buttao: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Header → Default → Primary*
+ */
+export interface HeaderSliceDefaultPrimary {
+  /**
+   * Numero do telefone field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.numero_do_telefone
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  numero_do_telefone: prismic.KeyTextField;
+
+  /**
+   * Link do numero field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.link_do_numero
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_do_numero: prismic.KeyTextField;
+
+  /**
+   * insta field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.insta
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  insta: prismic.KeyTextField;
+
+  /**
+   * Link do insta field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.link_do_insta
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_do_insta: prismic.KeyTextField;
+
+  /**
+   * horario de atendimento field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.horario_de_atendimento
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  horario_de_atendimento: prismic.KeyTextField;
+
+  /**
+   * cidade field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.cidade
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cidade: prismic.KeyTextField;
+
+  /**
+   * logo field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
+   * Cor Header field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.cor_header
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  cor_header: prismic.ColorField;
+
+  /**
+   * BotoesDeNavegacao field in *Header → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.botoesdenavegacao[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  botoesdenavegacao: prismic.GroupField<
+    Simplify<HeaderSliceDefaultPrimaryBotoesdenavegacaoItem>
+  >;
+}
+
+/**
+ * Default variation for Header Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeaderSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HeaderSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Header*
+ */
+type HeaderSliceVariation = HeaderSliceDefault;
+
+/**
+ * Header Shared Slice
+ *
+ * - **API ID**: `header`
+ * - **Description**: Header
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeaderSlice = prismic.SharedSlice<"header", HeaderSliceVariation>;
 
 /**
  * Item in *Linktree → Default → Primary → Links*
@@ -300,6 +453,11 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      HeaderSlice,
+      HeaderSliceDefaultPrimaryBotoesdenavegacaoItem,
+      HeaderSliceDefaultPrimary,
+      HeaderSliceVariation,
+      HeaderSliceDefault,
       LinktreeSlice,
       LinktreeSliceDefaultPrimaryLinksItem,
       LinktreeSliceDefaultPrimary,

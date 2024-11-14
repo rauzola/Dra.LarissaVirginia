@@ -1,0 +1,93 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"numero_do_telefone": {
+				"__TYPE__": "FieldContent",
+				"value": "agree",
+				"type": "Text"
+			},
+			"insta": {
+				"__TYPE__": "FieldContent",
+				"value": "naturally",
+				"type": "Text"
+			},
+			"horario_de_atendimento": {
+				"__TYPE__": "FieldContent",
+				"value": "compound",
+				"type": "Text"
+			},
+			"cidade": {
+				"__TYPE__": "FieldContent",
+				"value": "cat",
+				"type": "Text"
+			},
+			"logo": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+					"width": 4160,
+					"height": 3120
+				},
+				"url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+				"width": 4160,
+				"height": 3120,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"link_do_numero": {
+				"__TYPE__": "FieldContent",
+				"value": "ranch",
+				"type": "Text"
+			},
+			"link_do_insta": {
+				"__TYPE__": "FieldContent",
+				"value": "dirt",
+				"type": "Text"
+			},
+			"cor_header": {
+				"__TYPE__": "FieldContent",
+				"value": "#b0eb55",
+				"type": "Color"
+			},
+			"botoesdenavegacao": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"nome_da_buttao",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "lower",
+									"type": "Text"
+								}
+							],
+							[
+								"link_do_buttao",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "three",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
