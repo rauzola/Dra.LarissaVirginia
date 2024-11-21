@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | HeroSlice
   | HeaderSlice
   | SiteSlice
   | LinktreeSlice
@@ -230,6 +231,88 @@ type HeaderSliceVariation = HeaderSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type HeaderSlice = prismic.SharedSlice<"header", HeaderSliceVariation>;
+
+/**
+ * Primary content in *Hero → Default → Primary*
+ */
+export interface HeroSliceDefaultPrimary {
+  /**
+   * imagem de fundo HeroSection web field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.imagem_de_fundo_herosection_web
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem_de_fundo_herosection_web: prismic.ImageField<never>;
+
+  /**
+   * imagem de fundo HeroSection mobile field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.imagem_de_fundo_herosection_mobile
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem_de_fundo_herosection_mobile: prismic.ImageField<never>;
+
+  /**
+   * textoPrincipal field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Texto para deixar em destaque
+   * - **API ID Path**: hero.default.primary.textoprincipal
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  textoprincipal: prismic.KeyTextField;
+
+  /**
+   * texto para falar do lugar field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.texto_para_falar_do_lugar
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  texto_para_falar_do_lugar: prismic.RichTextField;
+
+  /**
+   * whatsapp field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.whatsapp
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  whatsapp: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Hero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HeroSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Hero*
+ */
+type HeroSliceVariation = HeroSliceDefault;
+
+/**
+ * Hero Shared Slice
+ *
+ * - **API ID**: `hero`
+ * - **Description**: Hero
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
  * Item in *Linktree → Default → Primary → Links*
@@ -458,6 +541,10 @@ declare module "@prismicio/client" {
       HeaderSliceDefaultPrimary,
       HeaderSliceVariation,
       HeaderSliceDefault,
+      HeroSlice,
+      HeroSliceDefaultPrimary,
+      HeroSliceVariation,
+      HeroSliceDefault,
       LinktreeSlice,
       LinktreeSliceDefaultPrimaryLinksItem,
       LinktreeSliceDefaultPrimary,

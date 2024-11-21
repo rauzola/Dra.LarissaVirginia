@@ -1,0 +1,58 @@
+{
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Hero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "imagem_de_fundo_herosection_web": {
+          "type": "Image",
+          "config": {
+            "label": "imagem de fundo HeroSection web",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "imagem_de_fundo_herosection_mobile": {
+          "type": "Image",
+          "config": {
+            "label": "imagem de fundo HeroSection mobile",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "textoprincipal": {
+          "type": "Text",
+          "config": {
+            "label": "textoPrincipal",
+            "placeholder": "Texto para deixar em destaque "
+          }
+        },
+        "texto_para_falar_do_lugar": {
+          "type": "StructuredText",
+          "config": {
+            "label": "texto para falar do lugar",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "whatsapp": {
+          "type": "Text",
+          "config": {
+            "label": "whatsapp",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
