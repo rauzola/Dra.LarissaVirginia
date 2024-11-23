@@ -122,6 +122,42 @@ const Site = ({ slice }: SiteProps): JSX.Element => {
       {/* HeroSection  FIM */}
 
 
+      {/* MoreInfoSection  inicio */}
+
+      <div id="moreInfo" className={`more-info-section ${isTablet ? 'tablet' : ''} ${isMobile ? 'mobile' : ''}`}>
+        <div className="more-info-content">
+          <img src={slice.primary.imagem_da_clinica?.url || "Design-sem-nome-28.png"} alt={slice.primary.imagem_da_clinica?.alt || "Imagem da Clínica"} className="info-image" />
+          <div className="info-text">
+
+
+            {slice.primary.sobre_a_clinica ? (
+              <PrismicRichText field={slice.primary.sobre_a_clinica} />
+            ) : (
+              <>
+                <h2>Sobre a Clínica</h2>
+                <p>Bem-vinda à <strong>Clínica Larissa Virginia Estética Avançada</strong>, onde os sonhos se tornam realidade. Nosso compromisso vai além do comum. Estamos aqui para fazer você se sentir em casa, confortável e cuidado como merece.</p>
+                <p>Investimos nas mais <strong>avançadas tecnologias</strong>, para sempre entregarmos o melhor. Cada paciente recebe um tratamento exclusivo, porque acreditamos na singularidade da beleza de cada um.</p>
+                <p>Minha missão é simples, mas poderosa: <strong>‘ENALTEÇO SUA BELEZA COM ELEGÂNCIA E NATURALIDADE’</strong>. Para nós, a naturalidade é a chave da verdadeira beleza.</p>
+                <p>Nossa visão é construir harmonia e gerenciar o envelhecimento, para que você se sinta no <strong>auge da sua beleza em todas as fases da vida.</strong></p>
+                <p>E nossos valores? Eles são a base de tudo o que fazemos. Elegância, dinamismo, contemporaneidade e excelência. Queremos ser a <strong>referência em estética avançada</strong>, porque você merece o melhor.</p>
+                <p><strong><em>Bem-vindo à Clínica Larissa Virginia, onde sua beleza é nossa prioridade.</em></strong></p>
+              </>
+            )}
+
+
+            <a href={slice.primary.link_do_insta || "dralarissavirginia"} target="_blank" rel="noopener noreferrer">
+              <button className="contact-button">
+                VISITE O INSTAGRAM
+                <FontAwesomeIcon icon={faInstagram} className="svg" />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* MoreInfoSection  FIM */}
+
+
     </>
   );
 }

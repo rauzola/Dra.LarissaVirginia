@@ -154,6 +154,56 @@
             "select": null,
             "allowText": true
           }
+        },
+        "texto4": {
+          "type": "Text",
+          "config": {
+            "label": "texto4",
+            "placeholder": ""
+          }
+        },
+        "texto5": {
+          "type": "Text",
+          "config": {
+            "label": "texto5",
+            "placeholder": ""
+          }
+        },
+        "texto6": {
+          "type": "StructuredText",
+          "config": {
+            "label": "texto6",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "imagem_da_clinica": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem da Clínica",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "sobre_a_clinica": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Sobre a Clínica",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "instagram": {
+          "type": "Link",
+          "config": {
+            "label": "INSTAGRAM",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
+          }
         }
       },
       "items": {}

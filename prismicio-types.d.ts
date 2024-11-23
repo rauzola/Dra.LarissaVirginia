@@ -282,6 +282,66 @@ export interface HeaderSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   whatsapp: prismic.LinkField;
+
+  /**
+   * texto4 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto4
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto4: prismic.KeyTextField;
+
+  /**
+   * texto5 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto5
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto5: prismic.KeyTextField;
+
+  /**
+   * texto6 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto6
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  texto6: prismic.RichTextField;
+
+  /**
+   * Imagem da Clínica field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.imagem_da_clinica
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem_da_clinica: prismic.ImageField<never>;
+
+  /**
+   * Sobre a Clínica field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.sobre_a_clinica
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  sobre_a_clinica: prismic.RichTextField;
+
+  /**
+   * INSTAGRAM field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.instagram
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  instagram: prismic.LinkField;
 }
 
 /**

@@ -397,3 +397,128 @@ nav a {
 
 
 /* HeroSection  FIM */
+
+
+
+/* MoreInfoSection  inicio */
+
+.more-info-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 110px 23%;
+}
+
+.more-info-content {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+}
+
+.info-image {
+  width: 450px;
+  height: 570px;
+  object-fit: cover;
+  margin-right: 65px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.info-text {
+  width: 100%;
+  text-align: start;
+}
+
+.info-text h2 {
+  font-family: "Open Sans", Sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: -2px;
+  color: #3D3D3D;
+  margin-top: 15px;
+}
+
+.info-text p {
+  width: 550px;
+  font-family: "Open Sans", Sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #7A7A7A;
+}
+
+.contact-button {
+  margin-top: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Tablet adjustments */
+.more-info-section.tablet {
+  padding: 40px 10%;
+}
+
+.more-info-section.tablet .info-image {
+  width: 450px;
+  height: auto;
+  margin-top: 50px;
+  margin-left: -50px;
+}
+
+.more-info-section.tablet .info-text h2 {
+  font-size: 36px;
+  line-height: 45px;
+}
+
+.more-info-section.tablet .info-text p {
+  font-size: 14px;
+  width: 99%;
+}
+
+/* Mobile adjustments */
+.more-info-section.mobile {
+  padding: 20px 5%;
+  text-align: center;
+}
+
+.more-info-section.mobile .more-info-content {
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.more-info-section.mobile .info-image {
+  width: 100%;
+  height: auto;
+  margin-right: 0;
+  margin-top: 20px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.more-info-section.mobile .info-text {
+  text-align: center;
+}
+
+.more-info-section.mobile .info-text h2 {
+  text-align: start;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.more-info-section.mobile .info-text p {
+  text-align: start;
+  font-size: 13px;
+  width: 100%;
+}
+
+.more-info-section.mobile .contact-button {
+  padding: 11px 15px;
+  font-size: 12px;
+}
+
+
+/* MoreInfoSection  FIM */
