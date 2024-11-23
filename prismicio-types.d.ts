@@ -7,7 +7,6 @@ type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 type PageDocumentDataSlicesSlice =
   | HeroSlice
   | HeaderSlice
-  | SiteSlice
   | LinktreeSlice
   | RichTextSlice;
 
@@ -84,11 +83,11 @@ export type PageDocument<Lang extends string = string> =
 export type AllDocumentTypes = PageDocument;
 
 /**
- * Item in *Header → Default → Primary → BotoesDeNavegacao*
+ * Item in *Site → Default → Primary → BotoesDeNavegacao*
  */
 export interface HeaderSliceDefaultPrimaryBotoesdenavegacaoItem {
   /**
-   * Nome da buttao field in *Header → Default → Primary → BotoesDeNavegacao*
+   * Nome da buttao field in *Site → Default → Primary → BotoesDeNavegacao*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -98,7 +97,7 @@ export interface HeaderSliceDefaultPrimaryBotoesdenavegacaoItem {
   nome_da_buttao: prismic.KeyTextField;
 
   /**
-   * link do buttao field in *Header → Default → Primary → BotoesDeNavegacao*
+   * link do buttao field in *Site → Default → Primary → BotoesDeNavegacao*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -109,11 +108,11 @@ export interface HeaderSliceDefaultPrimaryBotoesdenavegacaoItem {
 }
 
 /**
- * Primary content in *Header → Default → Primary*
+ * Primary content in *Site → Default → Primary*
  */
 export interface HeaderSliceDefaultPrimary {
   /**
-   * Numero do telefone field in *Header → Default → Primary*
+   * Numero do telefone field in *Site → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -123,7 +122,7 @@ export interface HeaderSliceDefaultPrimary {
   numero_do_telefone: prismic.KeyTextField;
 
   /**
-   * Link do numero field in *Header → Default → Primary*
+   * Link do numero field in *Site → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -133,7 +132,7 @@ export interface HeaderSliceDefaultPrimary {
   link_do_numero: prismic.KeyTextField;
 
   /**
-   * insta field in *Header → Default → Primary*
+   * insta field in *Site → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -143,7 +142,7 @@ export interface HeaderSliceDefaultPrimary {
   insta: prismic.KeyTextField;
 
   /**
-   * Link do insta field in *Header → Default → Primary*
+   * Link do insta field in *Site → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -153,7 +152,7 @@ export interface HeaderSliceDefaultPrimary {
   link_do_insta: prismic.KeyTextField;
 
   /**
-   * horario de atendimento field in *Header → Default → Primary*
+   * horario de atendimento field in *Site → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -163,7 +162,7 @@ export interface HeaderSliceDefaultPrimary {
   horario_de_atendimento: prismic.KeyTextField;
 
   /**
-   * cidade field in *Header → Default → Primary*
+   * cidade field in *Site → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -173,7 +172,7 @@ export interface HeaderSliceDefaultPrimary {
   cidade: prismic.KeyTextField;
 
   /**
-   * logo field in *Header → Default → Primary*
+   * logo field in *Site → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -183,7 +182,7 @@ export interface HeaderSliceDefaultPrimary {
   logo: prismic.ImageField<never>;
 
   /**
-   * Cor Header field in *Header → Default → Primary*
+   * Cor Header field in *Site → Default → Primary*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
@@ -193,7 +192,7 @@ export interface HeaderSliceDefaultPrimary {
   cor_header: prismic.ColorField;
 
   /**
-   * BotoesDeNavegacao field in *Header → Default → Primary*
+   * BotoesDeNavegacao field in *Site → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
@@ -203,10 +202,90 @@ export interface HeaderSliceDefaultPrimary {
   botoesdenavegacao: prismic.GroupField<
     Simplify<HeaderSliceDefaultPrimaryBotoesdenavegacaoItem>
   >;
+
+  /**
+   * texto field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto: prismic.KeyTextField;
+
+  /**
+   * texto1 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto1
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto1: prismic.KeyTextField;
+
+  /**
+   * texto2 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto2
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto2: prismic.KeyTextField;
+
+  /**
+   * HeroSectionWeb field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.herosectionweb
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  herosectionweb: prismic.ImageField<never>;
+
+  /**
+   * HeroSectionMobile field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.herosectionmobile
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  herosectionmobile: prismic.ImageField<never>;
+
+  /**
+   * Texto principal field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto_principal
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto_principal: prismic.KeyTextField;
+
+  /**
+   * texto para falar do lugar field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto_para_falar_do_lugar
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  texto_para_falar_do_lugar: prismic.RichTextField;
+
+  /**
+   * whatsapp field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: whatsapp
+   * - **API ID Path**: header.default.primary.whatsapp
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  whatsapp: prismic.LinkField;
 }
 
 /**
- * Default variation for Header Slice
+ * Default variation for Site Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -219,12 +298,12 @@ export type HeaderSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *Header*
+ * Slice variation for *Site*
  */
 type HeaderSliceVariation = HeaderSliceDefault;
 
 /**
- * Header Shared Slice
+ * Site Shared Slice
  *
  * - **API ID**: `header`
  * - **Description**: Header
@@ -459,58 +538,6 @@ export type RichTextSlice = prismic.SharedSlice<
   RichTextSliceVariation
 >;
 
-/**
- * Primary content in *Site → Default → Primary*
- */
-export interface SiteSliceDefaultPrimary {
-  /**
-   * imagem field in *Site → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: site.default.primary.imagem
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  imagem: prismic.ImageField<never>;
-
-  /**
-   * texto field in *Site → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: site.default.primary.texto
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  texto: prismic.KeyTextField;
-}
-
-/**
- * Default variation for Site Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SiteSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<SiteSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *Site*
- */
-type SiteSliceVariation = SiteSliceDefault;
-
-/**
- * Site Shared Slice
- *
- * - **API ID**: `site`
- * - **Description**: Site
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SiteSlice = prismic.SharedSlice<"site", SiteSliceVariation>;
-
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -554,10 +581,6 @@ declare module "@prismicio/client" {
       RichTextSliceDefaultPrimary,
       RichTextSliceVariation,
       RichTextSliceDefault,
-      SiteSlice,
-      SiteSliceDefaultPrimary,
-      SiteSliceVariation,
-      SiteSliceDefault,
     };
   }
 }

@@ -1,8 +1,8 @@
 {
-  "id": "site",
+  "id": "header",
   "type": "SharedSlice",
   "name": "Site",
-  "description": "Site",
+  "description": "Header",
   "variations": [
     {
       "id": "default",
@@ -12,12 +12,84 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "imagem": {
+        "numero_do_telefone": {
+          "type": "Text",
+          "config": {
+            "label": "Numero do telefone",
+            "placeholder": ""
+          }
+        },
+        "link_do_numero": {
+          "type": "Text",
+          "config": {
+            "label": "Link do numero",
+            "placeholder": ""
+          }
+        },
+        "insta": {
+          "type": "Text",
+          "config": {
+            "label": "insta",
+            "placeholder": ""
+          }
+        },
+        "link_do_insta": {
+          "type": "Text",
+          "config": {
+            "label": "Link do insta",
+            "placeholder": ""
+          }
+        },
+        "horario_de_atendimento": {
+          "type": "Text",
+          "config": {
+            "label": "horario de atendimento",
+            "placeholder": ""
+          }
+        },
+        "cidade": {
+          "type": "Text",
+          "config": {
+            "label": "cidade",
+            "placeholder": ""
+          }
+        },
+        "logo": {
           "type": "Image",
           "config": {
-            "label": "imagem",
+            "label": "logo",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "cor_header": {
+          "type": "Color",
+          "config": {
+            "label": "Cor Header",
+            "placeholder": ""
+          }
+        },
+        "botoesdenavegacao": {
+          "type": "Group",
+          "config": {
+            "label": "BotoesDeNavegacao",
+            "repeat": true,
+            "fields": {
+              "nome_da_buttao": {
+                "type": "Text",
+                "config": {
+                  "label": "Nome da buttao",
+                  "placeholder": ""
+                }
+              },
+              "link_do_buttao": {
+                "type": "Text",
+                "config": {
+                  "label": "link do buttao",
+                  "placeholder": ""
+                }
+              }
+            }
           }
         },
         "texto": {
@@ -25,6 +97,62 @@
           "config": {
             "label": "texto",
             "placeholder": ""
+          }
+        },
+        "texto1": {
+          "type": "Text",
+          "config": {
+            "label": "texto1",
+            "placeholder": ""
+          }
+        },
+        "texto2": {
+          "type": "Text",
+          "config": {
+            "label": "texto2",
+            "placeholder": ""
+          }
+        },
+        "herosectionweb": {
+          "type": "Image",
+          "config": {
+            "label": "HeroSectionWeb",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "herosectionmobile": {
+          "type": "Image",
+          "config": {
+            "label": "HeroSectionMobile",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "texto_principal": {
+          "type": "Text",
+          "config": {
+            "label": "Texto principal",
+            "placeholder": ""
+          }
+        },
+        "texto_para_falar_do_lugar": {
+          "type": "StructuredText",
+          "config": {
+            "label": "texto para falar do lugar",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "whatsapp": {
+          "type": "Link",
+          "config": {
+            "label": "whatsapp",
+            "placeholder": "whatsapp",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
           }
         }
       },

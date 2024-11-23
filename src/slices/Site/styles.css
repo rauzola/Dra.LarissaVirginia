@@ -1,0 +1,399 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.elementor-section {
+  display: flex;
+  justify-content: center;
+  background-color: #7B5DBB;
+  height: 41px;
+}
+
+.elementor-widget-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  list-style: none;
+  font-family: "Open Sans", Sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  padding: 0 12px;
+}
+
+.icons-list-itens,
+.icons-list-itens a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 18px;
+  padding-left: 1px;
+}
+
+.icons-list-itens .svg {
+  margin-right: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.header-column {
+  display: flex;
+  align-items: center;
+  margin: 0 25px;
+}
+
+.logo {
+  max-width: 100%;
+  height: 110px;
+  margin-right: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Open Sans", Sans-serif;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #616659;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.button-column {
+  display: flex;
+  justify-content: start;
+}
+
+.contact-button-header {
+  display: inline-block;
+  padding: 10px 35px;
+  fill: #7B5DBB;
+  color: #7B5DBB;
+  font-size: 15px;
+  font-family: "Open Sans", Sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid #7B5DBB;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+/* Responsividade mobile */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .button-column {
+    display: none;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    color: #33373D;
+    font-size: 13px;
+    padding: 10px 0;
+    text-align: left;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 22px;
+    color: #000;
+    font-weight: 600;
+    margin-left: auto;
+    position: relative;
+    z-index: 1001;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .header-column {
+    margin: 0;
+    flex: 1 1 auto;
+    justify-content: space-between;
+  }
+
+  .logo {
+    height: 100px;
+    margin-right: 0;
+  }
+}
+
+/* Responsividade para tablet (769px a 1207px) */
+@media (min-width: 769px) and (max-width: 1207px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .button-column {
+    display: none;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    color: #33373D;
+    font-size: 18px;
+    padding: 10px 0;
+    text-align: left;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 22px;
+    color: #000;
+    font-weight: 600;
+    margin-left: auto;
+    position: relative;
+    z-index: 1001;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .header-column {
+    margin: 0;
+    flex: 1 1 auto;
+    justify-content: space-between;
+  }
+}
+
+/* Responsividade desktops */
+@media (min-width: 1208px) {
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    background-color: transparent;
+    position: static;
+    width: auto;
+    padding: 0;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* HeroSection  inicio */
+
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px 20%;
+  background-image: url('https://images.prismic.io/drlarissavirginia/ZzVhuq8jQArT02vJ_HeroSection.png?auto=format,compress');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #3d3d3d;
+  height: 75vh;
+}
+
+.hero-content {
+  max-width: 700px;
+  padding: 10px;
+  text-align: start;
+}
+
+.hero-content h1 {
+  font-family: "Open Sans", Sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: -2.3px;
+  margin-bottom: 30px;
+}
+
+.hero-content p {
+  width: 600px;
+  font-family: "Open Sans", Sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #7A7A7A;
+  line-height: 1.5;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 9px 20px;
+  font-family: "Open Sans";
+  font-size: 15px;
+  color: #62675A;
+  border: 1px solid #62675A;
+  border-radius: 20px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-button .svg {
+  margin-left: 10px;
+}
+
+/* Estilos para tablet */
+/* @media (min-width: 769px) and (max-width: 1207px) {
+  .hero-section.tablet {
+    flex-direction: column;
+    padding: 0 10%;
+    height: 130vh;
+    text-align: center;
+    background-image: url('https://images.prismic.io/drlarissavirginia/ZzVhuq8jQArT02vJ_HeroSection.png?auto=format,compress');
+    background-size: 150%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero-section.tablet .hero-content {
+    max-width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .hero-section.tablet .hero-content h1 {
+    font-size: 44px;
+    line-height: 52px;
+    letter-spacing: -1px;
+  }
+
+  .hero-section.tablet .divider {
+    width: 70%;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: -5px;
+  }
+
+  .hero-section.tablet .hero-content p {
+    width: 100%;
+    font-size: 22px;
+    text-align: justify;
+    margin-top: 40px;
+    color: #000;
+  }
+
+  .hero-section.tablet .contact-button {
+    font-size: 24px;
+    margin-top: 10px;
+    padding: 8px 24px;
+  }
+
+  .hero-section.tablet .contact-button .svg {
+    margin-left: 15px;
+  }
+} */
+
+/* Estilos para mobile */
+@media (max-width: 768px) {
+  .hero-section.mobile {
+    flex-direction: column;
+    padding: 15px 10px 0px 10px;
+    height: 850px;
+    text-align: center;
+    background-image: url('https://images.prismic.io/drlarissavirginia/Zz0b3q8jQArT1DNI_HeroSectionMobile.png?auto=format,compress');
+    background-size: 150%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero-section.mobile .hero-content {
+    max-width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .hero-section.mobile .hero-content h1 {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -1px;
+  }
+
+  .hero-section.mobile .divider {
+    width: 70%;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: -15px;
+  }
+
+  .hero-section.mobile .hero-content p {
+    width: 100%;
+    font-size: 13px;
+    text-align: justify;
+    color: #000;
+  }
+
+  .hero-section.mobile .contact-button {
+    margin-top: -10px;
+    padding: 8px 20px;
+  }
+
+  .hero-section.mobile .contact-button .svg {
+    margin-left: 5px;
+  }
+}
+
+
+/* HeroSection  FIM */

@@ -33,9 +33,6 @@
             "header": {
               "type": "SharedSlice"
             },
-            "site": {
-              "type": "SharedSlice"
-            },
             "linktree": {
               "type": "SharedSlice"
             },

@@ -7,9 +7,28 @@ interface HeroSectionProps {
   isMobile?: boolean;
 }
 
+interface DividerProps {
+  isMobile?: boolean;
+}
+
+interface TitleProps {
+  isTablet?: boolean;
+  isMobile?: boolean;
+}
+
+interface ParagraphProps {
+  isTablet?: boolean;
+  isMobile?: boolean;
+}
+
+interface ContactButtonProps {
+  isTablet?: boolean;
+  isMobile?: boolean;
+}
+
 export const HeroSection = styled.div.withConfig({
   shouldForwardProp: (prop) => !["backgroundImage", "isTablet", "isMobile"].includes(prop),
-})<HeroSectionProps>`
+}) <HeroSectionProps>`
   position: relative;
   display: flex;
   align-items: center;
@@ -50,14 +69,9 @@ export const HeroContent = styled.div`
   text-align: start;
 `;
 
-interface TitleProps {
-  isTablet?: boolean;
-  isMobile?: boolean;
-}
-
 export const Title = styled.h1.withConfig({
   shouldForwardProp: (prop) => !["isTablet", "isMobile"].includes(prop),
-})<TitleProps>`
+}) <TitleProps>`
   font-family: "Open Sans", Sans-serif;
   font-size: ${({ isMobile }) => (isMobile ? "24px" : "44px")};
   font-weight: 700;
@@ -71,14 +85,9 @@ export const Title = styled.h1.withConfig({
   box-sizing: border-box;
 `;
 
-interface ParagraphProps {
-  isTablet?: boolean;
-  isMobile?: boolean;
-}
-
 export const Paragraph = styled.div.withConfig({
   shouldForwardProp: (prop) => !["isTablet", "isMobile"].includes(prop),
-})<ParagraphProps>`
+}) <ParagraphProps>`
   width: ${({ isTablet }) => (isTablet ? "100%" : "")};
   font-family: "Open Sans", Sans-serif;
   font-size: ${({ isMobile }) => (isMobile ? "13px" : "15px")};
@@ -94,27 +103,18 @@ export const Paragraph = styled.div.withConfig({
   box-sizing: border-box;
 `;
 
-interface DividerProps {
-  isMobile?: boolean;
-}
-
 export const Divider = styled.hr.withConfig({
   shouldForwardProp: (prop) => prop !== "isMobile",
-})<DividerProps>`
+}) <DividerProps>`
   width: 70%;
   height: 2px;
   margin: 0 auto;
   margin-top: ${({ isMobile }) => (isMobile ? "-15px" : "-5px")};
 `;
 
-interface ContactButtonProps {
-  isTablet?: boolean;
-  isMobile?: boolean;
-}
-
 export const ContactButton = styled.button.withConfig({
   shouldForwardProp: (prop) => !["isTablet", "isMobile"].includes(prop),
-})<ContactButtonProps>`
+}) <ContactButtonProps>`
   display: inline-block;
   padding: ${({ isMobile }) => (isMobile ? "8px 20px" : "9px 20px")};
   font-family: "Open Sans";
@@ -128,7 +128,6 @@ export const ContactButton = styled.button.withConfig({
   transition: background-color 0.3s ease, color 0.3s ease;
   margin-top: ${({ isMobile }) => (isMobile ? "-10px" : "0")};
 `;
-
 
 export const SvgIcon = styled.span<{ isTablet?: boolean; isMobile?: boolean }>`
   margin-left: ${({ isTablet, isMobile }) => (isMobile ? "5px" : isTablet ? "15px" : "10px")};
