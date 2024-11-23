@@ -1,7 +1,7 @@
 "use client"
 
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import React, { useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { useMediaQuery } from 'react-responsive';
@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
+import { PrismicNextLink } from "@prismicio/next";
 
 /**
  * Props for `Header`.
@@ -96,19 +97,25 @@ const Site = ({ slice }: SiteProps): JSX.Element => {
 
       <div id="hero" className={`hero-section ${isTablet ? 'tablet' : ''} ${isMobile ? 'mobile' : ''}`}>
         <div className="hero-content">
-          <h1>ENALTEÇA SUA BELEZA COM ELEGÂNCIA E NATURALIDADE</h1>
+          <h1>{slice.primary.texto_principal || "ENALTEÇA SUA BELEZA COM ELEGÂNCIA E NATURALIDADE"}</h1>
           <hr className="divider" />
-          <p>
-            Muito mais do que um espaço de beleza, é um refúgio de autocuidado e autoestima.
-            Venha fazer parte dessa jornada de transformação e descoberta, porque a verdadeira
-            beleza está <strong>esperando por você aqui.</strong>
-          </p>
-          <a href="https://wa.me/5544997731044" target="_blank" rel="noopener noreferrer">
+          {slice.primary.texto_para_falar_do_lugar ? (
+            <PrismicRichText field={slice.primary.texto_para_falar_do_lugar} />
+          ) : (
+            <span>
+              Muito mais do que um espaço de beleza, é um refúgio de autocuidado e autoestima.
+              Venha fazer parte dessa jornada de transformação e descoberta, porque a verdadeira beleza
+              está <strong>esperando por você aqui.</strong>
+            </span>
+          )}
+
+          <PrismicNextLink field={slice.primary.whatsapp}>
             <button className="contact-button">
               FALE CONOSCO
               <FontAwesomeIcon icon={faWhatsapp} className="svg" />
             </button>
-          </a>
+          </PrismicNextLink>
+
         </div>
       </div>
 
