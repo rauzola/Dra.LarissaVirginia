@@ -204,6 +204,81 @@
             "select": null,
             "allowText": true
           }
+        },
+        "texto7": {
+          "type": "Text",
+          "config": {
+            "label": "texto7",
+            "placeholder": ""
+          }
+        },
+        "texto8": {
+          "type": "Text",
+          "config": {
+            "label": "texto8",
+            "placeholder": ""
+          }
+        },
+        "texto9": {
+          "type": "Text",
+          "config": {
+            "label": "texto9",
+            "placeholder": ""
+          }
+        },
+        "texto10": {
+          "type": "Text",
+          "config": {
+            "label": "texto10",
+            "placeholder": ""
+          }
+        },
+        "procedimentos_realizados_na_clinica": {
+          "type": "Text",
+          "config": {
+            "label": "PROCEDIMENTOS REALIZADOS NA CLÍNICA",
+            "placeholder": ""
+          }
+        },
+        "nossas_especialidades": {
+          "type": "Text",
+          "config": {
+            "label": "Nossas Especialidades",
+            "placeholder": ""
+          }
+        },
+        "cards_especialidades": {
+          "type": "Group",
+          "config": {
+            "label": "cards_Especialidades",
+            "repeat": true,
+            "fields": {
+              "especialidade": {
+                "type": "Image",
+                "config": {
+                  "label": "Especialidade",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "nome_especialidade": {
+                "type": "Text",
+                "config": {
+                  "label": "Nome especialidade",
+                  "placeholder": ""
+                }
+              },
+              "descricao_especialidade": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "descrição especialidade",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              }
+            }
+          }
         }
       },
       "items": {}

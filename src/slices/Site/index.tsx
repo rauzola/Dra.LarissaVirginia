@@ -32,7 +32,9 @@ const Site = ({ slice }: SiteProps): JSX.Element => {
   };
 
   return (
+
     <>
+
       <section id="header" className="elementor-section">
         <div className="elementor-widget-container">
           <ul className="elementor-widget-container itens-list">
@@ -156,6 +158,41 @@ const Site = ({ slice }: SiteProps): JSX.Element => {
       </div>
 
       {/* MoreInfoSection  FIM */}
+
+      {/* SpecialtiesSection  inicio */}
+
+      <div id="specialties" className="specialties-section">
+        <div className="highlighted-text">
+          <p>{slice.primary.procedimentos_realizados_na_clinica || "PROCEDIMENTOS REALIZADOS NA CLÍNICA"}</p>
+        </div>
+
+        <div className="specialties-header">
+          <h2>{slice.primary.nossas_especialidades || "Nossas Especialidades"}</h2>
+          <div className="divider"></div>
+        </div>
+
+        <div
+          className={`specialties-cards ${isMobile ? 'mobile' : isTablet ? 'tablet' : ''}`}
+        >
+          {slice.primary.cards_especialidades.map((item, index) => (
+            <div key={item.especialidade.id || index} className="specialty-card">
+              <img
+                src={item.especialidade?.url || "Design-sem-nome-28.png"}
+                alt={item.especialidade?.alt || "Imagem da Especialidades"}
+                className="specialty-image"
+              />
+
+              <h3>{item.nome_especialidade}</h3>
+              <div className="specialty-description">
+                <PrismicRichText field={item.descricao_especialidade} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+      {/* SpecialtiesSection  FIM */}
 
 
     </>

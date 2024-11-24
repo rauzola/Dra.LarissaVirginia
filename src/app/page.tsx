@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Head from "next/head"; // Importando o componente Head do Next.js
 
 import { SliceZone } from "@prismicio/react";
 import * as prismic from "@prismicio/client";
@@ -6,12 +7,7 @@ import * as prismic from "@prismicio/client";
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 
-// This component renders your homepage.
-//
-// Use Next's generateMetadata function to render page metadata.
-//
-// Use the SliceZone to render the content of the page.
-
+// Função para gerar metadados da página
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
   const home = await client.getByUID("page", "home");
@@ -27,9 +23,22 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Index() {
-  // The client queries content from the Prismic API
+  // Cliente para consultar dados na API do Prismic
   const client = createClient();
   const home = await client.getByUID("page", "home");
 
-  return <SliceZone slices={home.data.slices} components={components} />;
+  return (
+    <>
+      {/* Adicionando a fonte ao <head> */}
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+
+      {/* Renderizando os slices */}
+      <SliceZone slices={home.data.slices} components={components} />
+    </>
+  );
 }

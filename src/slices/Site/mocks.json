@@ -234,6 +234,94 @@
 						}
 					}
 				]
+			},
+			"texto7": {
+				"__TYPE__": "FieldContent",
+				"value": "pay",
+				"type": "Text"
+			},
+			"texto8": {
+				"__TYPE__": "FieldContent",
+				"value": "fellow",
+				"type": "Text"
+			},
+			"texto9": {
+				"__TYPE__": "FieldContent",
+				"value": "usual",
+				"type": "Text"
+			},
+			"texto10": {
+				"__TYPE__": "FieldContent",
+				"value": "valuable",
+				"type": "Text"
+			},
+			"procedimentos_realizados_na_clinica": {
+				"__TYPE__": "FieldContent",
+				"value": "earn",
+				"type": "Text"
+			},
+			"nossas_especialidades": {
+				"__TYPE__": "FieldContent",
+				"value": "entire",
+				"type": "Text"
+			},
+			"cards_especialidades": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"especialidade",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+										"width": 4272,
+										"height": 2848
+									},
+									"url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+									"width": 4272,
+									"height": 2848,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"credits": null,
+									"alt": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"descricao_especialidade",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Amet eiusmod nostrud aute aliqua nostrud magna fugiat consectetur cillum ullamco sit nulla. Nostrud laboris sit mollit commodo tempor ad esse amet quis dolore occaecat nisi."
+											}
+										}
+									]
+								}
+							],
+							[
+								"nome_especialidade",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "program",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": []

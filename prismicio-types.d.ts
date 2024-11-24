@@ -108,6 +108,41 @@ export interface HeaderSliceDefaultPrimaryBotoesdenavegacaoItem {
 }
 
 /**
+ * Item in *Site → Default → Primary → cards_Especialidades*
+ */
+export interface HeaderSliceDefaultPrimaryCardsEspecialidadesItem {
+  /**
+   * Especialidade field in *Site → Default → Primary → cards_Especialidades*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.cards_especialidades[].especialidade
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  especialidade: prismic.ImageField<never>;
+
+  /**
+   * Nome especialidade field in *Site → Default → Primary → cards_Especialidades*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.cards_especialidades[].nome_especialidade
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  nome_especialidade: prismic.KeyTextField;
+
+  /**
+   * descrição especialidade field in *Site → Default → Primary → cards_Especialidades*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.cards_especialidades[].descricao_especialidade
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  descricao_especialidade: prismic.RichTextField;
+}
+
+/**
  * Primary content in *Site → Default → Primary*
  */
 export interface HeaderSliceDefaultPrimary {
@@ -342,6 +377,78 @@ export interface HeaderSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   instagram: prismic.LinkField;
+
+  /**
+   * texto7 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto7
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto7: prismic.KeyTextField;
+
+  /**
+   * texto8 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto8
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto8: prismic.KeyTextField;
+
+  /**
+   * texto9 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto9
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto9: prismic.KeyTextField;
+
+  /**
+   * texto10 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto10
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto10: prismic.KeyTextField;
+
+  /**
+   * PROCEDIMENTOS REALIZADOS NA CLÍNICA field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.procedimentos_realizados_na_clinica
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  procedimentos_realizados_na_clinica: prismic.KeyTextField;
+
+  /**
+   * Nossas Especialidades field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.nossas_especialidades
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  nossas_especialidades: prismic.KeyTextField;
+
+  /**
+   * cards_Especialidades field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.cards_especialidades[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  cards_especialidades: prismic.GroupField<
+    Simplify<HeaderSliceDefaultPrimaryCardsEspecialidadesItem>
+  >;
 }
 
 /**
@@ -625,6 +732,7 @@ declare module "@prismicio/client" {
       AllDocumentTypes,
       HeaderSlice,
       HeaderSliceDefaultPrimaryBotoesdenavegacaoItem,
+      HeaderSliceDefaultPrimaryCardsEspecialidadesItem,
       HeaderSliceDefaultPrimary,
       HeaderSliceVariation,
       HeaderSliceDefault,
