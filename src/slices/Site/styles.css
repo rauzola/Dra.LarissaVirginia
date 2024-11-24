@@ -565,6 +565,13 @@ a {
   margin-right: 0;
 }
 
+@media (max-width: 768px) {
+  .divider {
+    width: 90%; /* Ou 100% dependendo da necessidade */
+    max-width: none; /* Retira o limite máximo de largura */
+  }
+}
+
 .specialties-cards {
   display: grid;
   justify-content: center;
