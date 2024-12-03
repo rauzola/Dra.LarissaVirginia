@@ -586,6 +586,16 @@ export interface HeaderSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   texto_sobre_mim: prismic.RichTextField;
+
+  /**
+   * googleMaps field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.googlemaps
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  googlemaps: prismic.KeyTextField;
 }
 
 /**

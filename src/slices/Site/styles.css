@@ -960,15 +960,21 @@ a {
 }
 
 .about-me-image {
-  width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
-  max-width: 450px; /* Define uma largura máxima */
-  height: auto; /* Mantém a proporção da imagem */
-  object-fit: cover; /* Faz com que a imagem se ajuste ao contêiner */
+  width: 100%;
+  /* Garante que a imagem ocupe toda a largura disponível */
+  max-width: 450px;
+  /* Define uma largura máxima */
+  height: auto;
+  /* Mantém a proporção da imagem */
+  object-fit: cover;
+  /* Faz com que a imagem se ajuste ao contêiner */
   margin-right: 40px;
   margin-left: 30px;
   margin-top: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Mantém a sombra */
-  border-top-left-radius: 100px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Mantém a sombra */
+  border-top-left-radius: 100px;
+  /* Bordas arredondadas */
   border-bottom-right-radius: 100px;
 }
 
@@ -1078,3 +1084,44 @@ a {
 }
 
 /* AboutMeSection FIM */
+
+
+/* googleMaps INICIO */
+.google-map-section {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.google-map-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.google-map {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Ajustes para Tablet */
+.google-map-section.tablet {
+  padding: 0;
+}
+
+.google-map-container.tablet {
+  height: 400px;
+}
+
+/* Ajustes para Mobile */
+.google-map-section.mobile {
+  padding: 0;
+}
+
+.google-map-container.mobile {
+  height: 300px;
+}
+
+
+/* googleMaps FIM */

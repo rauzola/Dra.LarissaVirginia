@@ -464,6 +464,11 @@
 						}
 					}
 				]
+			},
+			"googlemaps": {
+				"__TYPE__": "FieldContent",
+				"value": "go",
+				"type": "Text"
 			}
 		},
 		"items": []

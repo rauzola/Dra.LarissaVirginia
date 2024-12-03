@@ -270,6 +270,22 @@ const Site = ({ slice }: SiteProps): JSX.Element => {
 
       {/* AboutMeSection  FIM */}
 
+      {/* googleMaps  inicio */}
+
+      <div id="googleMaps" className={`google-map-section ${isTablet ? 'tablet' : ''} ${isMobile ? 'mobile' : ''}`}>
+        <div className="google-map-container">
+          <iframe
+            title="Mapa da Clínica Luana Bianchi"
+            className="google-map"
+            src={slice.primary.googlemaps || "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6156.985364215175!2d-51.92533458980587!3d-23.42561697011774!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd0c4564fa9c9%3A0x9b513003f9b93713!2sR.%20N%C3%A9o%20Alves%20Martins%2C%20936%20-%20Zona%2001%2C%20Maring%C3%A1%20-%20PR%2C%2087050-110!5e0!3m2!1spt-BR!2sbr!4v1733258291212!5m2!1spt-BR!2sbr" }
+            width="800"
+            height="600"
+            // allowFullScreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </div>
 
 
 
