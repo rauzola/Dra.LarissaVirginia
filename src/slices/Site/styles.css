@@ -1158,7 +1158,7 @@ a {
 /* Informações gerais */
 .footer-info {
   width: 400px;
-  text-align: start;
+  text-align: center;
   margin-bottom: 0;
   flex: 1;
   margin-top: -25px;
@@ -1190,7 +1190,7 @@ a {
 
 /* Outros canais */
 .footer-channels {
-  text-align: start;
+  text-align: center;
   margin-top: -25px;
   flex: 1;
 }
@@ -1209,7 +1209,7 @@ a {
 .social-icons {
   display: flex;
   gap: 10px; /* Melhor espaçamento entre ícones */
-  justify-content: start;
+  justify-content: center;
   margin-top: 15px;
 }
 
@@ -1240,6 +1240,10 @@ a {
 /* Responsividade para Tablets */
 .footer.tablet h3 {
   font-size: 24px;
+}
+
+.footer.tablet .footer-info  {
+  text-align: center;
 }
 
 .footer.tablet .footer-info .footer-contact p {
