@@ -8,7 +8,7 @@ import { useMediaQuery } from 'react-responsive';
 // import * as S from "./styles";
 import './styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 import { PrismicNextLink } from "@prismicio/next";
@@ -277,7 +277,7 @@ const Site = ({ slice }: SiteProps): JSX.Element => {
           <iframe
             title="Mapa da Clínica Luana Bianchi"
             className="google-map"
-            src={slice.primary.googlemaps || "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6156.985364215175!2d-51.92533458980587!3d-23.42561697011774!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd0c4564fa9c9%3A0x9b513003f9b93713!2sR.%20N%C3%A9o%20Alves%20Martins%2C%20936%20-%20Zona%2001%2C%20Maring%C3%A1%20-%20PR%2C%2087050-110!5e0!3m2!1spt-BR!2sbr!4v1733258291212!5m2!1spt-BR!2sbr" }
+            src={slice.primary.googlemaps || "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6156.985364215175!2d-51.92533458980587!3d-23.42561697011774!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd0c4564fa9c9%3A0x9b513003f9b93713!2sR.%20N%C3%A9o%20Alves%20Martins%2C%20936%20-%20Zona%2001%2C%20Maring%C3%A1%20-%20PR%2C%2087050-110!5e0!3m2!1spt-BR!2sbr!4v1733258291212!5m2!1spt-BR!2sbr"}
             width="800"
             height="600"
             // allowFullScreen=""
@@ -287,6 +287,66 @@ const Site = ({ slice }: SiteProps): JSX.Element => {
         </div>
       </div>
 
+      {/* googleMaps  FIM */}
+
+
+      {/* Footer INICIO */}
+
+      <div id="footer" className={`footer ${isTablet ? 'tablet' : ''} ${isMobile ? 'mobile' : ''}`}>
+        <div className="footer-content">
+          <div className="footer-logo">
+
+            <img
+              src={slice.primary.logo_footer?.url || "Design-sem-nome-28.png"}
+              alt={slice.primary.logo_footer?.alt || "Imagem Logo Footer"}
+            />
+          </div>
+          <div className="footer-info">
+            <h3>Venha nos visitar!</h3>
+            <div className="footer-contact">
+              <p>
+                <FontAwesomeIcon icon={faWhatsapp} className="svg" />
+                <a href={slice.primary.link_do_numero || "(44) 9 9707-5986"} target="_blank" rel="noopener noreferrer">{slice.primary.numero_do_telefone || "(44) 9 9707-5986"}</a>
+
+
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faInstagram} className="svg" />
+                <a href={slice.primary.link_do_insta || "dralarissavirginia"} target="_blank" rel="noopener noreferrer">{slice.primary.insta || "dralarissavirginia"}</a>
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faMapMarkerAlt} className="svg" />
+                {slice.primary.cidade || "Maringá/PR"}
+              </p>
+            </div>
+          </div>
+          <div className="footer-channels">
+            <h3>Outros Canais</h3>
+            <div className="social-icons">
+              <a href={slice.primary.link_do_insta || "dralarissavirginia"} target="_blank" rel="noopener noreferrer">
+                <div className="circle-icon instagram">
+                  <FontAwesomeIcon icon={faInstagram} className="svg" />
+                </div>
+              </a>
+              {/* <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <div className="circle-icon facebook">
+                  <FontAwesomeIcon icon={faFacebook} className="svg" />
+                </div>
+              </a> */}
+              <a href={slice.primary.link_do_numero || "(44) 9 9707-5986"} target="_blank" rel="noopener noreferrer">
+                <div className="circle-icon whatsapp">
+                  <FontAwesomeIcon icon={faWhatsapp} className="svg" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p> {slice.primary.todos_os_direitos_reservados || "Todos os direitos reservados à Dra. Larissa Virginia Estética Avançada."}</p>
+        </div>
+      </div>
+
+      {/* Footer FIM */}
 
 
 

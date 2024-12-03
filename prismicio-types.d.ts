@@ -596,6 +596,46 @@ export interface HeaderSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   googlemaps: prismic.KeyTextField;
+
+  /**
+   * texto15 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto15
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto15: prismic.KeyTextField;
+
+  /**
+   * texto16 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto16
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto16: prismic.KeyTextField;
+
+  /**
+   * Logo Footer field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.logo_footer
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo_footer: prismic.ImageField<never>;
+
+  /**
+   * Todos os direitos reservados field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.todos_os_direitos_reservados
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  todos_os_direitos_reservados: prismic.KeyTextField;
 }
 
 /**

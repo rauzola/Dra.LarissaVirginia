@@ -386,6 +386,35 @@
             "label": "googleMaps",
             "placeholder": ""
           }
+        },
+        "texto15": {
+          "type": "Text",
+          "config": {
+            "label": "texto15",
+            "placeholder": ""
+          }
+        },
+        "texto16": {
+          "type": "Text",
+          "config": {
+            "label": "texto16",
+            "placeholder": ""
+          }
+        },
+        "logo_footer": {
+          "type": "Image",
+          "config": {
+            "label": "Logo Footer",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "todos_os_direitos_reservados": {
+          "type": "Text",
+          "config": {
+            "label": "Todos os direitos reservados",
+            "placeholder": ""
+          }
         }
       },
       "items": {}

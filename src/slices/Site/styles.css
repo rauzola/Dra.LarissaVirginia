@@ -1125,3 +1125,160 @@ a {
 
 
 /* googleMaps FIM */
+
+/* footer INICIO */
+
+.footer {
+  background-color: #48294b;
+  color: #fff;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Anonymous Pro", Sans-serif; /* Fonte consistente */
+}
+
+/* Conteúdo principal do footer */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 90px;
+}
+
+/* Logo no footer */
+.footer-logo img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Informações gerais */
+.footer-info {
+  width: 400px;
+  text-align: start;
+  margin-bottom: 0;
+  flex: 1;
+  margin-top: -25px;
+}
+
+.footer-info h3 {
+  font-size: 28px; /* Ajuste para desktop */
+  margin-bottom: 15px;
+  letter-spacing: -1.5px;
+  font-weight: 600;
+}
+
+.footer-info .footer-contact p {
+  margin: 15px 0;
+  font-size: 14px; /* Tamanho de fonte ajustado */
+  line-height: 1.6; /* Melhor espaçamento entre linhas */
+}
+
+.footer-info .footer-contact a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500; /* Destaque para links */
+}
+
+.footer-info .footer-contact p .svg {
+  margin-right: 8px;
+  font-size: 16px; /* Ajuste de tamanho dos ícones */
+}
+
+/* Outros canais */
+.footer-channels {
+  text-align: start;
+  margin-top: -25px;
+  flex: 1;
+}
+
+.footer-channels h3 {
+  font-size: 28px; /* Fonte ajustada */
+  margin-bottom: 15px;
+  letter-spacing: -1.5px;
+  font-weight: 600;
+}
+
+.footer-channels .circle-icon .svg {
+  font-size: 22px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px; /* Melhor espaçamento entre ícones */
+  justify-content: start;
+  margin-top: 15px;
+}
+
+.circle-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+  text-align: center;
+  background-color: #7B5DBB;
+  padding: 5px;
+  width: 100%;
+}
+
+.footer-bottom p {
+  font-size: 12px; /* Fonte menor e discreta */
+  font-weight: 400;
+  color: #e0e0e0;
+}
+
+/* Responsividade para Tablets */
+.footer.tablet h3 {
+  font-size: 24px;
+}
+
+.footer.tablet .footer-info .footer-contact p {
+  font-size: 13px;
+}
+
+.footer.tablet .footer-bottom p {
+  font-size: 11px;
+}
+
+/* Responsividade para Mobile */
+.footer.mobile {
+  padding-top: 20px;
+}
+
+.footer.mobile h3 {
+  font-size: 20px;
+}
+
+.footer.mobile .footer-content {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer.mobile .footer-info .footer-contact p {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.footer.mobile .social-icons {
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer.mobile .footer-bottom {
+  margin-top: 20px;
+  font-size: 11px;
+}
+
+
+/* footer FIM */
