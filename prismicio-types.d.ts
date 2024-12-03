@@ -143,6 +143,31 @@ export interface HeaderSliceDefaultPrimaryCardsEspecialidadesItem {
 }
 
 /**
+ * Item in *Site → Default → Primary → Cards Cursos*
+ */
+export interface HeaderSliceDefaultPrimaryCardsCursosItem {
+  /**
+   * imagem cards field in *Site → Default → Primary → Cards Cursos*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.cards_cursos[].imagem_cards
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem_cards: prismic.ImageField<never>;
+
+  /**
+   * Nome cards field in *Site → Default → Primary → Cards Cursos*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.cards_cursos[].nome_cards
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  nome_cards: prismic.KeyTextField;
+}
+
+/**
  * Primary content in *Site → Default → Primary*
  */
 export interface HeaderSliceDefaultPrimary {
@@ -449,6 +474,68 @@ export interface HeaderSliceDefaultPrimary {
   cards_especialidades: prismic.GroupField<
     Simplify<HeaderSliceDefaultPrimaryCardsEspecialidadesItem>
   >;
+
+  /**
+   * texto11 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto11
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto11: prismic.KeyTextField;
+
+  /**
+   * texto12 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto12
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto12: prismic.KeyTextField;
+
+  /**
+   * Cursos field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.cursos
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cursos: prismic.KeyTextField;
+
+  /**
+   * Imagem Cursos field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.imagem_cursos
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem_cursos: prismic.ImageField<never>;
+
+  /**
+   * Texto Cursos field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto_cursos
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  texto_cursos: prismic.RichTextField;
+
+  /**
+   * Cards Cursos field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.cards_cursos[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  cards_cursos: prismic.GroupField<
+    Simplify<HeaderSliceDefaultPrimaryCardsCursosItem>
+  >;
 }
 
 /**
@@ -733,6 +820,7 @@ declare module "@prismicio/client" {
       HeaderSlice,
       HeaderSliceDefaultPrimaryBotoesdenavegacaoItem,
       HeaderSliceDefaultPrimaryCardsEspecialidadesItem,
+      HeaderSliceDefaultPrimaryCardsCursosItem,
       HeaderSliceDefaultPrimary,
       HeaderSliceVariation,
       HeaderSliceDefault,

@@ -549,7 +549,8 @@ a {
 }
 
 .specialties-header h2 {
-  font-family: "Roboto", sans-serif; /* Aplica a fonte correta */
+  font-family: "Roboto", sans-serif;
+  /* Aplica a fonte correta */
   font-size: 44px;
   font-weight: 700;
   letter-spacing: -2px;
@@ -567,8 +568,10 @@ a {
 
 @media (max-width: 768px) {
   .divider {
-    width: 90%; /* Ou 100% dependendo da necessidade */
-    max-width: none; /* Retira o limite máximo de largura */
+    width: 90%;
+    /* Ou 100% dependendo da necessidade */
+    max-width: none;
+    /* Retira o limite máximo de largura */
   }
 }
 
@@ -611,12 +614,17 @@ a {
 }
 
 .specialty-description {
-  font-family: "Roboto", sans-serif; /* Garante que a fonte seja aplicada */
-  font-size: 14px; /* Ajuste o tamanho conforme necessário */
-  line-height: 1.6; /* Melhora a leitura */
-  color: #3d3d3d; /* Certifique-se de que a cor é visível */
+  font-family: "Roboto", sans-serif;
+  /* Garante que a fonte seja aplicada */
+  font-size: 14px;
+  /* Ajuste o tamanho conforme necessário */
+  line-height: 1.6;
+  /* Melhora a leitura */
+  color: #3d3d3d;
+  /* Certifique-se de que a cor é visível */
   text-align: start;
 }
+
 .specialty-description ul li {
   list-style: none;
   position: relative;
@@ -624,8 +632,10 @@ a {
 }
 
 .specialty-description ul li:before {
-  content: "✔"; /* Unicode do check */
-  font-family: Arial, sans-serif; /* Garanta que a fonte seja padrão */
+  content: "✔";
+  /* Unicode do check */
+  font-family: Arial, sans-serif;
+  /* Garanta que a fonte seja padrão */
   font-size: 14px;
   color: #333;
   position: absolute;
@@ -718,5 +728,213 @@ a {
 }
 
 
-
 /* SpecialtiesSection  FIM */
+
+
+/* CoursesSection  inicio */
+
+.courses-section {
+  width: 100%;
+  padding: 100px 22%;
+  text-align: center;
+  font-family: "Open Sans", Sans-serif;
+}
+
+.courses-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  text-align: left;
+}
+
+.courses-image {
+  width: 100%;
+  /* Faz a imagem ocupar 100% da largura do contêiner */
+  height: auto;
+  /* Mantém a proporção da imagem */
+  max-width: 485px;
+  /* Limita a largura máxima, caso necessário */
+  max-height: 100%;
+  /* Impede que ultrapasse a altura do contêiner */
+  object-fit: cover;
+  /* Corta ou ajusta a imagem para preencher o contêiner */
+  border-top-left-radius: 100px;
+  /* Mantém o design arredondado */
+  border-bottom-right-radius: 100px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Adiciona a sombra */
+  margin-top: 20px;
+  /* Espaçamento superior */
+}
+
+
+.courses-text {
+  max-width: 550px;
+  flex: 1;
+}
+
+.courses-text h2 {
+  margin-top: -10px;
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: #333;
+}
+
+.divider {
+  width: 220px;
+  height: 1px;
+  margin-left: 0;
+  margin-top: -18px;
+  margin-bottom: 45px;
+  background-color: #000000;
+}
+
+.courses-text p {
+  width: 100%;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 2px;
+}
+
+.course-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  font-size: 27px;
+  color: #3D3D3D;
+  letter-spacing: -2px;
+}
+
+.course-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.849);
+  border-radius: 5px;
+  box-shadow: -8px 8px 7px rgba(0, 0, 0, 0.185);
+  padding: 10px 20px;
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.course-logo {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 15px;
+}
+
+.course-card span {
+  font-size: 1em;
+  color: #333;
+  font-weight: 600;
+}
+
+@media (max-width: 321px) {
+  .courses-content {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .courses-section {
+    padding: 5px 5%;
+    padding-bottom: 50px;
+  }
+
+  .courses-image {
+    margin-top: -20px;
+    width: 95%;
+  }
+
+  .courses-text {
+    max-width: 100%;
+  }
+
+  .course-card {
+    max-width: 100%;
+  }
+
+  .course-card span {
+    font-size: 21px;
+    color: #333;
+    font-weight: 600;
+  }
+
+  .divider {
+    width: 250px;
+    height: 1px;
+    margin-left: 0;
+    margin-top: -18px;
+    margin-bottom: 45px;
+    background-color: #000000;
+  }
+}
+
+@media (min-width: 322px) and (max-width: 768px) {
+  .courses-content {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .courses-section {
+    padding: 50px 5%;
+  }
+
+  .courses-image {
+    width: 100%;
+  }
+
+  .courses-text {
+    max-width: 100%;
+  }
+
+  .course-card {
+    max-width: 100%;
+  }
+
+  .divider {
+    width: 250px;
+    height: 1px;
+    margin-left: 0;
+    margin-top: -18px;
+    margin-bottom: 45px;
+    background-color: #000000;
+  }
+
+  .course-cards {
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .course-card span {
+    font-size: 21px;
+    color: #333;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1207px) {
+  .courses-image {
+    width: 100%;
+  }
+
+  .courses-text {
+    margin-left: -50px;
+  }
+
+  .course-card span {
+    font-size: 19px;
+    color: #333;
+    font-weight: 600;
+  }
+}
+
+
+/* CoursesSection  FIM */

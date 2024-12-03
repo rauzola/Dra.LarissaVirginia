@@ -194,6 +194,48 @@ const Site = ({ slice }: SiteProps): JSX.Element => {
 
       {/* SpecialtiesSection  FIM */}
 
+      {/* CoursesSection  inicio */}
+
+      <div id="courses" className="courses-section">
+        <div className="courses-content">
+          <img
+            src={slice.primary.imagem_cursos?.url || "Design-sem-nome-28.png"}
+            alt={slice.primary.imagem_cursos?.alt || "Imagem Cursos"}
+            className="courses-image"
+          />
+          <div className="courses-text">
+            <h2>{slice.primary.cursos || "Cursos"}</h2>
+            <div className="divider"></div>
+
+            {slice.primary.texto_cursos ? (
+              <PrismicRichText field={slice.primary.texto_cursos} />
+            ) : (
+              <>
+                <p>Ministro cursos vips ensinando técnicas que valorizem a anatomia e naturalidade de cada paciente.</p>
+                <p>Conheço as dificuldades em viver da harmonização, meu inicio não foi fácil e é com base na minha experiência de vida que levo muito mais do que técnica para dentro dos meus cursos.</p>
+                <p>Sou fã e praticante da naturalidade, por isso é que meus cursos prometem lhe entregar muita elegância e naturalidade, minha intenção é que você tenha segurança para realizar o procedimento mais pedido dentro dos consultório do Brasil.</p>
+              </>
+            )}
+
+            <div className="course-cards">
+              {slice.primary.cards_cursos.map((item) => (
+
+                <div key={item.nome_cards} className="course-card">
+
+
+                  <img src={item.imagem_cards.url || "Design-sem-nome-28.png"} alt={slice.primary.imagem_cursos?.alt || "Imagem Cursos"} className="course-logo" />
+                  <span>{item.nome_cards}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CoursesSection  FIM */}
+
+
 
     </>
   );

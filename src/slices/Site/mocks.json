@@ -322,6 +322,99 @@
 						]
 					}
 				]
+			},
+			"texto11": {
+				"__TYPE__": "FieldContent",
+				"value": "setting",
+				"type": "Text"
+			},
+			"texto12": {
+				"__TYPE__": "FieldContent",
+				"value": "dry",
+				"type": "Text"
+			},
+			"cursos": {
+				"__TYPE__": "FieldContent",
+				"value": "unless",
+				"type": "Text"
+			},
+			"imagem_cursos": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+					"width": 3168,
+					"height": 4752
+				},
+				"url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+				"width": 3168,
+				"height": 4752,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"texto_cursos": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Quis esse consectetur non consectetur culpa consequat cupidatat laboris aliqua nostrud. Culpa adipisicing minim reprehenderit."
+						}
+					}
+				]
+			},
+			"cards_cursos": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"imagem_cards",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+										"width": 3199,
+										"height": 3199
+									},
+									"url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+									"width": 3199,
+									"height": 3199,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"credits": null,
+									"alt": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"nome_cards",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "leave",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": []
