@@ -341,6 +341,44 @@
               }
             }
           }
+        },
+        "texto13": {
+          "type": "Text",
+          "config": {
+            "label": "texto13",
+            "placeholder": ""
+          }
+        },
+        "texto14": {
+          "type": "Text",
+          "config": {
+            "label": "texto14",
+            "placeholder": ""
+          }
+        },
+        "imagem_sobre_mim": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem Sobre mim",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "sobre_mim": {
+          "type": "Text",
+          "config": {
+            "label": "Sobre mim",
+            "placeholder": ""
+          }
+        },
+        "texto_sobre_mim": {
+          "type": "StructuredText",
+          "config": {
+            "label": "texto Sobre mim",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
         }
       },
       "items": {}

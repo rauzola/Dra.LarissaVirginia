@@ -536,6 +536,56 @@ export interface HeaderSliceDefaultPrimary {
   cards_cursos: prismic.GroupField<
     Simplify<HeaderSliceDefaultPrimaryCardsCursosItem>
   >;
+
+  /**
+   * texto13 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto13
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto13: prismic.KeyTextField;
+
+  /**
+   * texto14 field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto14
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  texto14: prismic.KeyTextField;
+
+  /**
+   * Imagem Sobre mim field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.imagem_sobre_mim
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem_sobre_mim: prismic.ImageField<never>;
+
+  /**
+   * Sobre mim field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.sobre_mim
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sobre_mim: prismic.KeyTextField;
+
+  /**
+   * texto Sobre mim field in *Site → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.default.primary.texto_sobre_mim
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  texto_sobre_mim: prismic.RichTextField;
 }
 
 /**

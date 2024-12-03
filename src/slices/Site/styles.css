@@ -938,3 +938,143 @@ a {
 
 
 /* CoursesSection  FIM */
+
+/* AboutMeSection INICIO */
+
+.about-me-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 50px 23%;
+  background-color: #faf2f0;
+  font-family: "Open Sans", Sans-serif;
+}
+
+.about-me-content {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  text-align: left;
+}
+
+.about-me-image {
+  width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+  max-width: 450px; /* Define uma largura máxima */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: cover; /* Faz com que a imagem se ajuste ao contêiner */
+  margin-right: 40px;
+  margin-left: 30px;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Mantém a sombra */
+  border-top-left-radius: 100px; /* Bordas arredondadas */
+  border-bottom-right-radius: 100px;
+}
+
+
+.about-me-text {
+  max-width: 550px;
+}
+
+.instagram-button {
+  display: inline-block;
+  background-color: transparent;
+  color: #62675A;
+  padding: 11px 25px;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #62675A;
+  border-radius: 30px;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.instagram-button .svg {
+  margin-left: 8px;
+}
+
+.about-me-text h2 {
+  font-family: "Open Sans", Sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -2px;
+  color: #3D3D3D;
+}
+
+.about-me-text p {
+  width: 550px;
+  font-family: "Open Sans", Sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #7A7A7A;
+}
+
+/* Ajustes para Tablet */
+.about-me-section.tablet {
+  padding: 40px 10%;
+}
+
+.about-me-section.tablet .about-me-image {
+  width: 450px;
+  height: auto;
+  margin-top: 50px;
+  margin-left: -50px;
+}
+
+.about-me-section.tablet .about-me-text h2 {
+  font-size: 36px;
+  line-height: 45px;
+}
+
+.about-me-section.tablet .about-me-text p {
+  font-size: 14px;
+  width: 99%;
+}
+
+/* Ajustes para Mobile */
+.about-me-section.mobile {
+  padding: 20px 5%;
+  text-align: center;
+}
+
+.about-me-section.mobile .about-me-content {
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.about-me-section.mobile .about-me-image {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.about-me-section.mobile .about-me-text {
+  text-align: center;
+}
+
+.about-me-section.mobile .about-me-text h2 {
+  text-align: start;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.about-me-section.mobile .about-me-text p {
+  text-align: start;
+  font-size: 13px;
+  width: 100%;
+}
+
+.about-me-section.mobile .instagram-button {
+  padding: 11px 15px;
+  font-size: 12px;
+}
+
+/* AboutMeSection FIM */

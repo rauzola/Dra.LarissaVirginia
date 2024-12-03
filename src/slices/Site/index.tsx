@@ -219,10 +219,7 @@ const Site = ({ slice }: SiteProps): JSX.Element => {
 
             <div className="course-cards">
               {slice.primary.cards_cursos.map((item) => (
-
                 <div key={item.nome_cards} className="course-card">
-
-
                   <img src={item.imagem_cards.url || "Design-sem-nome-28.png"} alt={slice.primary.imagem_cursos?.alt || "Imagem Cursos"} className="course-logo" />
                   <span>{item.nome_cards}
                   </span>
@@ -234,6 +231,46 @@ const Site = ({ slice }: SiteProps): JSX.Element => {
       </div>
 
       {/* CoursesSection  FIM */}
+
+      {/* AboutMeSection  inicio */}
+
+      <div id="aboutMe" className={`about-me-section ${isTablet ? 'tablet' : ''} ${isMobile ? 'mobile' : ''}`}>
+
+        <div className="about-me-content" id="aboutMe">
+
+          <img
+            src={slice.primary.imagem_sobre_mim?.url || "Design-sem-nome-28.png"}
+            alt={slice.primary.imagem_sobre_mim?.alt || "Imagem Sobre"}
+            className="about-me-image"
+          />
+          <div className="about-me-text">
+            <h2>{slice.primary.sobre_mim || "Sobre mim..."}</h2>
+
+            {slice.primary.texto_sobre_mim ? (
+              <PrismicRichText field={slice.primary.texto_sobre_mim} />
+            ) : (
+              <>
+                <p>Transformei meu sonho em realidade e agora, com minha própria clínica, estou pronta para te ajudar a revelar sua verdadeira beleza interior e exterior. A pandemia pode ter nos afastado dos cuidados pessoais, mas eu estou aqui para trazer de volta a confiança e o autocuidado que todos merecem.</p>
+                <p>Desde o início da minha jornada na biomedicina, meu coração sempre pulsou pela estética injetável, e quando descobri o mundo dos ativos, soube que estava no caminho certo. Com estágios que me deram a experiência clínica necessária, minha paixão se solidificou, e a criação da minha clínica se tornou uma realidade.</p>
+                <p>Cada dia é uma oportunidade de aprender e crescer, e durante essa jornada, descobri meu amor pela tricologia, realizando sonhos por meio de protocolos personalizados. Não só isso, mas também lancei meu próprio gloss com minha marca, que já é um sucesso.</p>
+                <p><strong>Minha clínica é mais do que um espaço de beleza, é um refúgio de autocuidado e autoestima. Venha fazer parte dessa jornada de transformação e descoberta, porque a verdadeira beleza está esperando por você aqui.</strong></p>
+              </>
+            )}
+
+            <a href={slice.primary.link_do_insta || "dralarissavirginia"} target="_blank" rel="noopener noreferrer">
+              <button className="contact-button">
+                VISITE O INSTAGRAM
+                <FontAwesomeIcon icon={faInstagram} className="svg" />
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      {/* AboutMeSection  FIM */}
+
+
 
 
 
